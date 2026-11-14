@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Firestone Fire &amp; Security Systems | Civil Defence Approved Fire Safety Company UAE</title>
+  <meta name="description" content="Firestone Fire and Security Systems LLC — Civil Defence approved fire fighting, fire alarm, gas, security & ELV, fire sealant and smoke management systems across Dubai, Abu Dhabi, Al Ain, Sharjah and Ras Al Khaimah since 2007.">
+  <meta property="og:title" content="Firestone Fire & Security Systems">
+  <meta property="og:description" content="Protecting Lives, Securing Spaces. Civil Defence approved fire & safety solutions across the UAE since 2007.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta name="theme-color" content="#060908">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__mark">
+      <img src="assets/mark.png" alt="">
+      <span class="preloader__bar"><i></i></span>
+      <span class="preloader__txt mono">INITIALISING SAFETY SYSTEMS</span>
+    </div>
+  </div>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__contact">
+        <a href="tel:+971506761638"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+971 50 676 1638</a>
+        <a href="mailto:sales@firestonefs.com"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>sales@firestonefs.com</a>
+      </div>
+      <div class="topbar__right mono">
+        <span class="live-dot"></span> Dubai &amp; Abu Dhabi Civil Defence Approved
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="brand" aria-label="Firestone home">
+        <img src="assets/mark.png" alt="" class="brand__mark">
+        <span class="brand__word"><b>FIRE</b>STONE</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#why">Why us</a>
+        <a href="#life">Life at Firestone</a>
+        <a href="#offices">Contact</a>
+        <a href="tel:+971506761638" class="nav__emergency"><span class="sos-dot"></span>Emergency support</a>
+      </nav>
+
+      <div class="header__cta">
+        <button class="btn btn--primary btn--sm" data-open-quote>Get a quote</button>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO (3D) ============ -->
+    <section class="hero" id="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero__vignette"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow mono"><span class="eyebrow__line"></span>Fire · Gas · Security · ELV · Since 2007</p>
+          <h1 class="hero__title">
+            <span class="line"><span>Leading the</span></span>
+            <span class="line"><span>Way in <em class="fire-text">Safety</em></span></span>
+            <span class="line"><span>&amp; Technology</span></span>
+          </h1>
+          <p class="hero__lead">We deliver integrated safety solutions — from fire and gas systems to advanced IT and security services. Reliable, innovative and fully compliant systems that protect people, property and infrastructure across the UAE.</p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" data-open-quote>
+              Get a quote
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <a href="#services" class="btn btn--ghost">Explore services</a>
+          </div>
+        </div>
+
+        <aside class="status-panel" aria-label="System status illustration">
+          <div class="status-panel__head mono">
+            <span>BUILDING SAFETY · STATUS</span>
+            <span class="status-panel__clock" id="clock">--:--:--</span>
+          </div>
+          <ul class="status-list mono">
+            <li><span>Fire alarm network</span><b class="ok">ARMED</b></li>
+            <li><span>Sprinkler pressure</span><b class="ok" data-flicker="7.2,7.4,7.3,7.1">7.2 BAR</b></li>
+            <li><span>FM200 suppression</span><b class="ok">READY</b></li>
+            <li><span>Gas detection</span><b class="ok">NORMAL</b></li>
+            <li><span>CCTV &amp; access control</span><b class="ok">ONLINE</b></li>
+            <li><span>Hassantuk link</span><b class="ok">CONNECTED</b></li>
+          </ul>
+          <div class="status-panel__wave"><svg viewBox="0 0 300 40" preserveAspectRatio="none"><path id="wave" d=""/></svg></div>
+        </aside>
+      </div>
+
+      <div class="container hero__stats">
+        <div class="stat"><b data-count="2007" data-from="1990">2007</b><span>Protecting the UAE since</span></div>
+        <div class="stat"><b data-count="5">5</b><span>Operational bases across the Emirates</span></div>
+        <div class="stat"><b data-count="2">2</b><span>Civil Defence approvals — Dubai &amp; Abu Dhabi</span></div>
+        <div class="stat"><b data-count="6">6</b><span>Specialised service divisions</span></div>
+      </div>
+
+      <a href="#clients" class="scroll-cue mono" aria-label="Scroll down"><span></span>Scroll</a>
+    </section>
+
+    <!-- ============ CLIENTS ============ -->
+    <section class="clients" id="clients">
+      <div class="container">
+        <p class="clients__title mono">// Trusted by leading organisations</p>
+      </div>
+      <div class="marquee">
+        <div class="marquee__track">
+          <div class="logo-chip"><img src="assets/clients/vps.webp" alt="VPS Healthcare"></div>
+          <div class="logo-chip"><img src="assets/clients/mof.webp" alt="UAE Ministry of Finance"></div>
+          <div class="logo-chip"><img src="assets/clients/rabdan.webp" alt="Rabdan Academy"></div>
+          <div class="logo-chip"><img src="assets/clients/adveti.webp" alt="ADVETI"></div>
+          <div class="logo-chip"><img src="assets/clients/lulu.svg" alt="LuLu Group"></div>
+          <div class="logo-chip"><img src="assets/clients/medeor.webp" alt="Medeor Hospital"></div>
+          <div class="logo-chip"><img src="assets/clients/llh.webp" alt="LLH Hospital"></div>
+          <!-- duplicate set for seamless loop -->
+          <div class="logo-chip" aria-hidden="true"><img src="assets/clients/vps.webp" alt=""></div>
+          <div class="logo-chip" aria-hidden="true"><img src="assets/clients/mof.webp" alt=""></div>
+          <div class="logo-chip" aria-hidden="true"><img src="assets/clients/rabdan.webp" alt=""></div>
+          <div class="logo-chip" aria-hidden="true"><img src="assets/clients/adveti.webp" alt=""></div>
+          <div class="logo-chip" aria-hidden="true"><img src="assets/clients/lulu.svg" alt=""></div>
+          <div class="logo-chip" aria-hidden="true"><img src="assets/clients/medeor.webp" alt=""></div>
+          <div class="logo-chip" aria-hidden="true"><img src="assets/clients/llh.webp" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="photo-stack" id="photoStack">
+          <figure class="photo-stack__card pc-3"><img src="assets/img/team-overhead.webp" alt="Firestone team photographed from above" loading="lazy"></figure>
+          <figure class="photo-stack__card pc-2"><img src="assets/img/office-award.webp" alt="Firestone team at the office receiving a certificate" loading="lazy"></figure>
+          <figure class="photo-stack__card pc-1"><img src="assets/img/team-group.webp" alt="The full Firestone team group photo" loading="lazy"></figure>
+          <div class="photo-stack__badge">
+            <b>Since 2007</b>
+            <span>Civil Defence approved</span>
+          </div>
+        </div>
+
+        <div class="about__copy">
+          <p class="eyebrow mono" data-reveal><span class="eyebrow__line"></span>About Firestone</p>
+          <h2 class="h2" data-reveal>Global client service with a strong <span class="green-text">Middle East</span> presence</h2>
+          <p data-reveal>Since 2007, Firestone Fire and Security Systems LLC has been a trusted provider of fire protection and security solutions across the UAE. With operational bases in Dubai, Abu Dhabi, Al Ain, Sharjah and Ras Al Khaimah, we are dedicated to safeguarding lives and properties throughout all Emirates.</p>
+          <p data-reveal>Our expertise covers fire and safety systems, fire alarms, fire sealants, gas safety systems, IT security solutions and ventilation systems — delivered end-to-end, from system design to installation and maintenance, to the highest industry standards.</p>
+
+          <ul class="emirates mono" data-reveal>
+            <li>Dubai</li><li>Abu Dhabi</li><li>Al Ain</li><li>Sharjah</li><li>Ras Al Khaimah</li>
+          </ul>
+
+          <div class="mv">
+            <div class="flip" data-reveal tabindex="0">
+              <div class="flip__inner">
+                <div class="flip__face">
+                  <span class="mono">01 — Our Mission</span>
+                  <h3>Protecting Lives, Securing Spaces.</h3>
+                  <i class="flip__hint mono">Hover to flip ↻</i>
+                </div>
+                <div class="flip__face flip__back">
+                  <p>Reliable, high-quality systems that ensure safety, compliance and peace of mind for commercial, industrial and residential clients.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip" data-reveal tabindex="0">
+              <div class="flip__inner">
+                <div class="flip__face">
+                  <span class="mono">02 — Our Vision</span>
+                  <h3>To Lead with Innovation in Fire &amp; Safety Solutions.</h3>
+                  <i class="flip__hint mono">Hover to flip ↻</i>
+                </div>
+                <div class="flip__face flip__back">
+                  <p>Bringing modern fire, gas, security and IT technology together into one integrated safety partner for the UAE.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow mono" data-reveal><span class="eyebrow__line"></span>What we do</p>
+          <h2 class="h2" data-reveal>Explore our specialised services</h2>
+          <p class="section-head__sub" data-reveal>Six divisions, one accountable partner — engineered, installed and maintained to UAE Civil Defence standards.</p>
+        </div>
+
+        <div class="svc-grid">
+          <article class="svc tilt">
+            <div class="svc__glare"></div>
+            <div class="svc__top"><span class="svc__icon"><svg viewBox="0 0 24 24"><path d="M12 2c0 6-6 8-6 14a6 6 0 0 0 12 0c0-6-6-8-6-14z"/><path d="M12 12c0 3-2 4-2 6a2 2 0 0 0 4 0c0-2-2-3-2-6z"/></svg></span><span class="svc__num mono">01</span></div>
+            <h3>Fire Protection Services</h3>
+            <p>Design, supply and installation of fire alarm systems, smoke detection, fire fighting systems, sprinkler systems and FM200 gas suppression across Abu Dhabi and the UAE. ADCD approved — from AutoCAD shop drawings to testing, commissioning and Annual Maintenance Contracts.</p>
+            <button class="svc__link" data-open-quote="Fire Protection Services">Know more <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+          </article>
+
+          <article class="svc tilt">
+            <div class="svc__glare"></div>
+            <div class="svc__top"><span class="svc__icon"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="15" rx="3"/><path d="M10 7V4h4v3M8.5 2.5h7M7 12h10"/></svg></span><span class="svc__num mono">02</span></div>
+            <h3>Gas Systems</h3>
+            <p>FM200 gas suppression, LPG and central gas system design, supply, installation and AMC in Abu Dhabi. DOE approved gas safety systems — fully compliant with UAE Civil Defence regulations.</p>
+            <button class="svc__link" data-open-quote="Gas Systems">Know more <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+          </article>
+
+          <article class="svc tilt">
+            <div class="svc__glare"></div>
+            <div class="svc__top"><span class="svc__icon"><svg viewBox="0 0 24 24"><path d="M3 7.5 16 4.5l1.6 6.2L4.6 13.7z"/><path d="m17.2 7.4 3.8-.9.9 4.6-3.8.9"/><path d="M8 13v4.5H3"/><circle cx="12" cy="8.6" r="1"/></svg></span><span class="svc__num mono">03</span></div>
+            <h3>Security &amp; ELV Systems</h3>
+            <p>Supply and installation of CCTV cameras, access control, gate barrier systems and audio-video intercom in Abu Dhabi. SIRA and MCC approved — including ADMCC approved CCTV Annual Maintenance Contracts.</p>
+            <button class="svc__link" data-open-quote="Security & ELV Systems">Know more <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+          </article>
+
+          <article class="svc tilt">
+            <div class="svc__glare"></div>
+            <div class="svc__top"><span class="svc__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.3h18M3 14.6h18M9 4v5.3M15 9.3v5.3M9 14.6V20"/></svg></span><span class="svc__num mono">04</span></div>
+            <h3>Fire Sealant &amp; Fire Stopping</h3>
+            <p>Firestop sealants, firestop sprays and intumescent coating systems across the UAE. FCIA certified passive fire protection contractor — DOE approved penetration sealing for walls, floors and building joints.</p>
+            <button class="svc__link" data-open-quote="Fire Sealant & Fire Stopping">Know more <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+          </article>
+
+          <article class="svc tilt">
+            <div class="svc__glare"></div>
+            <div class="svc__top"><span class="svc__icon"><svg viewBox="0 0 24 24"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h16a3 3 0 1 1-3 3"/><path d="M3 16h7"/></svg></span><span class="svc__num mono">05</span></div>
+            <h3>Smoke Management Systems</h3>
+            <p>DOE approved smoke management, smoke ventilation and exhaust system design, supply and installation — compliant with UAE Civil Defence and air ventilation regulations for commercial, industrial and residential buildings.</p>
+            <button class="svc__link" data-open-quote="Smoke Management Systems">Know more <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+          </article>
+
+          <article class="svc tilt">
+            <div class="svc__glare"></div>
+            <div class="svc__top"><span class="svc__icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="svc__num mono">06</span></div>
+            <h3>Civil Defence Compliance</h3>
+            <p>ADCD fitness, Istifa, DCD and SCD certificate renewals, inspections, documentation and approvals. We manage your fire AMC, shop drawings and evacuation plan submissions so your facility passes every inspection.</p>
+            <button class="svc__link" data-open-quote="Civil Defence Compliance">Know more <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow mono" data-reveal><span class="eyebrow__line"></span>From design to certification</p>
+            <h2 class="h2" data-reveal>Complete fire protection, every step covered</h2>
+          </div>
+          <p class="section-head__sub" data-reveal>Approved by Dubai and Abu Dhabi Civil Defence, we make securing a Civil Defence certificate a seamless process by guiding you through every step.</p>
+        </div>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline__rail"><i id="railFill"></i></div>
+          <div class="step" data-reveal>
+            <span class="step__dot"></span>
+            <span class="step__n mono">STEP 01</span>
+            <h4>Consultation &amp; Design</h4>
+            <p>Site survey, system design and AutoCAD shop drawings tailored to your facility.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__dot"></span>
+            <span class="step__n mono">STEP 02</span>
+            <h4>Supply &amp; Installation</h4>
+            <p>Certified equipment installed by trained, Civil Defence approved technicians.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__dot"></span>
+            <span class="step__n mono">STEP 03</span>
+            <h4>Testing &amp; Commissioning</h4>
+            <p>Full system testing so every alarm, pump and valve performs on day one.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__dot"></span>
+            <span class="step__n mono">STEP 04</span>
+            <h4>Civil Defence Certification</h4>
+            <p>Documentation, inspections and approvals handled end-to-end.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__dot"></span>
+            <span class="step__n mono">STEP 05</span>
+            <h4>Maintenance &amp; AMC</h4>
+            <p>Scheduled inspections, repairs and Annual Maintenance Contracts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CORE SERVICES ============ -->
+    <section class="core section" id="core">
+      <div class="container core__grid">
+        <div class="core__intro">
+          <p class="eyebrow mono" data-reveal><span class="eyebrow__line"></span>Your trusted fire fighting company</p>
+          <h2 class="h2" data-reveal>Fire safety is more than a regulation. It's a <span class="fire-text">critical necessity.</span></h2>
+          <p data-reveal>In the dynamic landscape of the UAE, Firestone is a leading provider of complete fire protection solutions — the preferred choice for commercial, residential and industrial clients across all emirates.</p>
+          <figure class="core__img" data-reveal>
+            <img src="assets/img/women-laptop.webp" alt="Client reviewing a fire safety plan on a tablet" loading="lazy">
+            <figcaption class="mono"><span class="live-dot"></span>Hassantuk-ready integrations</figcaption>
+          </figure>
+        </div>
+
+        <div class="acc" id="acc">
+          <details class="acc__item" open>
+            <summary><span class="mono">01</span>Fire Fighting Systems<i></i></summary>
+            <p>Design, supply &amp; installation of sprinkler systems, fire pumps, hose reels, FM200 and more.</p>
+          </details>
+          <details class="acc__item">
+            <summary><span class="mono">02</span>Fire Alarm Systems<i></i></summary>
+            <p>Expert installation of conventional, addressable and wireless alarm systems with full testing and servicing.</p>
+          </details>
+          <details class="acc__item">
+            <summary><span class="mono">03</span>Fire Maintenance &amp; AMC<i></i></summary>
+            <p>Regular inspections, repairs and Annual Maintenance Contracts to ensure system readiness.</p>
+          </details>
+          <details class="acc__item">
+            <summary><span class="mono">04</span>Emergency Evacuation Planning<i></i></summary>
+            <p>Evacuation plans and photoluminescent signage to guide occupants to safety.</p>
+          </details>
+          <details class="acc__item">
+            <summary><span class="mono">05</span>Fire Extinguisher Services<i></i></summary>
+            <p>Inspection, servicing and readiness checks of all portable fire fighting equipment.</p>
+          </details>
+          <details class="acc__item">
+            <summary><span class="mono">06</span>Fire Sealant Applications<i></i></summary>
+            <p>Compartmentalisation of fire and smoke for enhanced building protection.</p>
+          </details>
+          <details class="acc__item">
+            <summary><span class="mono">07</span>Hassantuk System Integration<i></i></summary>
+            <p>Hassle-free setup and maintenance with Civil Defence connectivity.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY US ============ -->
+    <section class="why section" id="why">
+      <div class="container why__grid">
+        <div class="why__visual" id="whyVisual">
+          <div class="why__layer why__layer--img"><img src="assets/img/handshake.webp" alt="Handshake over a signed safety contract" loading="lazy"></div>
+          <div class="why__layer why__layer--card mono">
+            <span class="ok-tick">✓</span>
+            <div><b>Certificate issued</b><small>Civil Defence · Approved</small></div>
+          </div>
+          <div class="why__layer why__layer--ring"></div>
+        </div>
+
+        <div>
+          <p class="eyebrow mono" data-reveal><span class="eyebrow__line"></span>Why choose us</p>
+          <h2 class="h2" data-reveal>One partner, consultation to commissioning</h2>
+          <div class="why-cards">
+            <div class="why-card" data-reveal>
+              <span class="why-card__icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <h4>UAE-wide presence</h4>
+              <p>Serving Dubai, Abu Dhabi, Al Ain, Sharjah and Ras Al Khaimah.</p>
+            </div>
+            <div class="why-card" data-reveal>
+              <span class="why-card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></span>
+              <h4>Certified professionals</h4>
+              <p>Approved by both Dubai and Abu Dhabi Civil Defence.</p>
+            </div>
+            <div class="why-card" data-reveal>
+              <span class="why-card__icon"><svg viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></span>
+              <h4>Complete solutions</h4>
+              <p>From consultation to commissioning and maintenance — all under one roof.</p>
+            </div>
+            <div class="why-card" data-reveal>
+              <span class="why-card__icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+              <h4>Client-focused</h4>
+              <p>Custom, scalable, budget-friendly solutions without compromising safety or compliance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LIFE AT FIRESTONE (3D RING) ============ -->
+    <section class="life section" id="life">
+      <div class="container section-head section-head--center">
+        <p class="eyebrow mono" data-reveal><span class="eyebrow__line"></span>Life at Firestone<span class="eyebrow__line"></span></p>
+        <h2 class="h2" data-reveal>The people behind every system</h2>
+        <p class="section-head__sub" data-reveal>Drag to spin — one team, across every emirate.</p>
+      </div>
+      <div class="ring-stage" id="ringStage">
+        <div class="ring" id="ring">
+          <figure><img src="assets/img/team-group.webp" alt="Firestone team group photo" loading="lazy"></figure>
+          <figure><img src="assets/img/trophy-celebration.webp" alt="Team celebrating with a trophy" loading="lazy"></figure>
+          <figure><img src="assets/img/team-four.webp" alt="Four Firestone team members in team jerseys" loading="lazy"></figure>
+          <figure><img src="assets/img/office-award.webp" alt="Certificate presentation at the Firestone office" loading="lazy"></figure>
+          <figure><img src="assets/img/leader-speech.webp" alt="Firestone leader addressing the team" loading="lazy"></figure>
+          <figure><img src="assets/img/trophy-blue.webp" alt="Blue team lifting the trophy" loading="lazy"></figure>
+          <figure><img src="assets/img/team-overhead.webp" alt="Overhead photo of the Firestone family" loading="lazy"></figure>
+        </div>
+        <div class="ring-floor"></div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta" id="cta">
+      <div class="cta__bg" style="background-image:url('assets/img/cta-bg.webp')"></div>
+      <div class="container cta__inner">
+        <div class="cta__mark" aria-hidden="true">
+          <div class="cube">
+            <img src="assets/mark.png" alt="">
+          </div>
+        </div>
+        <div class="cta__copy">
+          <h2 class="h2" data-reveal>Looking for a reliable fire &amp; safety company?</h2>
+          <p data-reveal>We deliver certified fire and security systems tailored to your facility's needs.</p>
+          <div class="hero__actions" data-reveal>
+            <button class="btn btn--primary" data-open-quote>Get a quote <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <a href="https://wa.me/971506761638" target="_blank" rel="noopener" class="btn btn--ghost">WhatsApp us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OFFICES ============ -->
+    <section class="offices section" id="offices">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow mono" data-reveal><span class="eyebrow__line"></span>Our offices</p>
+          <h2 class="h2" data-reveal>Talk to the team nearest you</h2>
+        </div>
+        <div class="office-grid">
+          <article class="office tilt">
+            <div class="svc__glare"></div>
+            <span class="office__tag mono">HQ · 01</span>
+            <h3>Abu Dhabi</h3>
+            <p class="office__addr">#216, Al Fahim Building,<br>Musaffah M4, Abu Dhabi — UAE</p>
+            <ul class="office__contact">
+              <li><a href="tel:024441638">02 444 1638</a></li>
+              <li><a href="tel:0523258941">052 325 8941</a></li>
+              <li><a href="mailto:sales@firestonefs.com">sales@firestonefs.com</a></li>
+            </ul>
+          </article>
+          <article class="office tilt">
+            <div class="svc__glare"></div>
+            <span class="office__tag mono">BRANCH · 02</span>
+            <h3>Dubai</h3>
+            <p class="office__addr">WH 6A, RAS Building,<br>Umm Ramool, Dubai — UAE</p>
+            <ul class="office__contact">
+              <li><a href="tel:043881698">04 388 1698</a></li>
+              <li><a href="tel:0508981638">050 898 1638</a></li>
+              <li><a href="mailto:salesdxb@firestonefs.com">salesdxb@firestonefs.com</a></li>
+            </ul>
+          </article>
+          <article class="office tilt">
+            <div class="svc__glare"></div>
+            <span class="office__tag mono">BRANCH · 03</span>
+            <h3>Sharjah</h3>
+            <p class="office__addr">Al Nayeli 16, Industrial Area,<br>Sharjah — UAE</p>
+            <ul class="office__contact">
+              <li><a href="tel:065778311">06 577 8311</a></li>
+              <li><a href="tel:0509003876">050 900 3876</a> · <a href="tel:0523422833">052 342 2833</a></li>
+              <li><a href="mailto:salesshj@firestonefs.com">salesshj@firestonefs.com</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#top" class="brand brand--lg">
+          <img src="assets/mark.png" alt="" class="brand__mark">
+          <span class="brand__word"><b>FIRE</b>STONE</span>
+        </a>
+        <p>Fire &amp; Security Systems LLC. Protecting Lives, Securing Spaces — across the UAE since 2007.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
+          <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+          <a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt=""></a>
+        </div>
+      </div>
+      <div>
+        <h5 class="mono">Services</h5>
+        <ul>
+          <li><a href="#services">Fire protection services</a></li>
+          <li><a href="#services">Gas systems</a></li>
+          <li><a href="#services">Fire sealant &amp; fire stopping</a></li>
+          <li><a href="#services">Security &amp; ELV systems</a></li>
+          <li><a href="#services">Smoke management systems</a></li>
+          <li><a href="#core">Evacuation plan</a></li>
+          <li><a href="#core">Fire alarm</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="mono">Company</h5>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#life">Life at Firestone</a></li>
+          <li><a href="#offices">Contact</a></li>
+          <li><a href="#" data-todo>Blog</a></li>
+          <li><a href="#" data-todo>Projects</a></li>
+          <li><a href="#" data-todo>Career</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="mono">Get in touch</h5>
+        <ul>
+          <li><a href="tel:+971506761638">+971 50 676 1638</a></li>
+          <li><a href="mailto:sales@firestonefs.com">sales@firestonefs.com</a></li>
+          <li><button class="btn btn--primary btn--sm" data-open-quote>Get a quote</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Firestone Fire &amp; Security Systems LLC. All rights reserved.</span>
+      <span class="mono">Civil Defence approved · Dubai · Abu Dhabi</span>
+    </div>
+    <div class="footer__giant" aria-hidden="true">FIRESTONE</div>
+  </footer>
+
+  <!-- ============ FLOATING ACTIONS ============ -->
+  <div class="fab">
+    <a href="https://wa.me/971506761638" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+    <a href="tel:+971506761638" aria-label="Call Firestone"><img src="assets/icons/call.svg" alt=""></a>
+  </div>
+
+  <!-- ============ QUOTE MODAL ============ -->
+  <div class="modal" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteTitle" hidden>
+    <div class="modal__backdrop" data-close-quote></div>
+    <form class="modal__panel" id="quoteForm">
+      <button type="button" class="modal__close" aria-label="Close" data-close-quote>×</button>
+      <p class="eyebrow mono"><span class="eyebrow__line"></span>Free consultation</p>
+      <h3 id="quoteTitle">Request a quote</h3>
+      <div class="field-row">
+        <label>Full name<input name="name" required autocomplete="name"></label>
+        <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+      </div>
+      <label>Email<input name="email" type="email" autocomplete="email"></label>
+      <div class="field-row">
+        <label>Service
+          <select name="service">
+            <option>Fire Protection Services</option>
+            <option>Gas Systems</option>
+            <option>Security &amp; ELV Systems</option>
+            <option>Fire Sealant &amp; Fire Stopping</option>
+            <option>Smoke Management Systems</option>
+            <option>Civil Defence Compliance</option>
+            <option>Annual Maintenance Contract (AMC)</option>
+          </select>
+        </label>
+        <label>Emirate
+          <select name="emirate">
+            <option>Abu Dhabi</option><option>Dubai</option><option>Sharjah</option><option>Al Ain</option><option>Ras Al Khaimah</option><option>Other</option>
+          </select>
+        </label>
+      </div>
+      <label>Project details<textarea name="message" rows="3" placeholder="Building type, size, timeline…"></textarea></label>
+      <button class="btn btn--primary btn--block" type="submit">Send request <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="modal__note">Opens your email app with the details filled in, addressed to sales@firestonefs.com.</p>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/mark-data.js"></script>
+  <script src="js/hero3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

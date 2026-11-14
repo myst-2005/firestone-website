@@ -1,0 +1,12 @@
+# Raw uploaded source assets (cleaned copies live in /assets)
+/*.webp
+/*.png
+/*.svg
+/*.avif
+/*.jpeg
+/*.jpg
+
+# Local tooling
+.claude/
+.DS_Store
+Thumbs.db
