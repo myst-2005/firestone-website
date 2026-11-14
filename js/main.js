@@ -291,6 +291,86 @@
     })();
   }
 
+  /* ---------- Scroll safety bar + mobile action bar ---------- */
+  const safetyBar = $('#safetyBar');
+  const mbar = $('.mbar');
+  let barTick = false;
+  function updateBars() {
+    barTick = false;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const p = max > 0 ? window.scrollY / max : 0;
+    if (safetyBar) safetyBar.style.transform = `scaleX(${p.toFixed(4)})`;
+    if (mbar) mbar.classList.toggle('is-visible', window.scrollY > 240);
+  }
+  window.addEventListener('scroll', () => { if (!barTick) { barTick = true; requestAnimationFrame(updateBars); } }, { passive: true });
+  updateBars();
+
+  /* ---------- Fire → Safe scroll story ---------- */
+  const story = $('#story');
+  if (story) {
+    const bld = $('#bld');
+    const flames = $('#flames');
+    const glowEl = $('.fire-glow', bld);
+    const smokeEl = $('.smoke', bld);
+    const steps = $$('.story__step', story);
+    const dots = $$('.story__dots li', story);
+    const arc = $('#gaugeArc');
+    const needle = $('#needle');
+    const safetyVal = $('#safetyVal');
+    const safetyLabel = $('#safetyLabel');
+    const tempVal = $('#tempVal');
+    const smokeVal = $('#smokeVal');
+    const statusVal = $('#statusVal');
+    const storyBar = $('#storyBar');
+    const STATUS = ['NORMAL', 'SMOKE DETECTED', 'ALARM · CD ALERTED', 'SUPPRESSING', 'ALL CLEAR'];
+    const ss = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+    let lastStage = -1;
+    let ticking = false;
+
+    function renderStory() {
+      ticking = false;
+      const r = story.getBoundingClientRect();
+      const total = story.offsetHeight - window.innerHeight;
+      const p = reduceMotion ? 1 : Math.min(1, Math.max(0, -r.top / Math.max(1, total)));
+
+      const fire = ss(0.03, 0.3, p) * (1 - ss(0.52, 0.8, p));
+      const smoke = ss(0.08, 0.34, p) * (1 - ss(0.6, 0.9, p));
+      const stage = p < 0.2 ? 0 : p < 0.34 ? 1 : p < 0.5 ? 2 : p < 0.85 ? 3 : 4;
+
+      flames.setAttribute('transform', `translate(100 246) scale(${Math.max(0.001, fire).toFixed(3)}) translate(-100 -246)`);
+      glowEl.style.opacity = (fire * 0.95).toFixed(3);
+      smokeEl.style.opacity = smoke.toFixed(3);
+
+      bld.classList.toggle('is-detect', p > 0.2 && p < 0.85);
+      bld.classList.toggle('is-alarm', p > 0.34 && p < 0.85);
+      bld.classList.toggle('is-spray', p > 0.5 && p < 0.86);
+      bld.classList.toggle('is-safe', p >= 0.85);
+
+      const level = Math.round(100 - 84 * Math.max(fire, smoke * 0.7));
+      arc.style.strokeDashoffset = String(100 - level);
+      needle.style.transform = `rotate(${(-90 + 180 * level / 100).toFixed(1)}deg)`;
+      needle.style.transformOrigin = '100px 100px';
+      safetyVal.textContent = level;
+      const lv = level < 40 ? 'danger' : level < 75 ? 'warn' : 'safe';
+      story.dataset.level = lv;
+      safetyLabel.textContent = lv === 'danger' ? 'DANGER' : lv === 'warn' ? 'WARNING' : 'SAFE';
+      tempVal.textContent = Math.round(24 + 540 * fire) + '°C';
+      smokeVal.textContent = Math.round(smoke * 100) + '%';
+      if (storyBar) storyBar.style.transform = `scaleX(${p.toFixed(4)})`;
+
+      if (stage !== lastStage) {
+        lastStage = stage;
+        story.dataset.stage = stage;
+        statusVal.textContent = STATUS[stage];
+        steps.forEach((s, i) => { s.classList.toggle('is-active', i === stage); s.classList.toggle('is-past', i < stage); });
+        dots.forEach((d, i) => d.classList.toggle('is-on', i === stage));
+      }
+    }
+    window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(renderStory); } }, { passive: true });
+    window.addEventListener('resize', renderStory);
+    renderStory();
+  }
+
   /* ---------- Quote modal ---------- */
   const modal = $('#quoteModal');
   const form = $('#quoteForm');

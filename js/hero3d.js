@@ -31,7 +31,8 @@
     window.dispatchEvent(new Event('hero3d:ready'));
     return;
   }
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  const isPhone = window.matchMedia('(max-width: 700px)').matches;
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, isPhone ? 1.5 : 2));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
 
   const scene = new THREE.Scene();
@@ -55,7 +56,7 @@
   tex.colorSpace = THREE.SRGBColorSpace;
   tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
-  const LAYERS = 44;
+  const LAYERS = isPhone ? 34 : 44;
   const DEPTH = 0.55;
   const SIZE = 4.2;
   const layerGeo = new THREE.PlaneGeometry(SIZE, SIZE);
@@ -355,9 +356,10 @@
       root.scale.setScalar(1);
       camera.fov = 38;
     } else {
-      root.position.set(0, 2.6, -2);
-      root.scale.setScalar(0.72);
-      camera.fov = 52;
+      // phones/tablets: mark sits in the top part of the hero, above the headline
+      root.position.set(0, 4.6, -1);
+      root.scale.setScalar(camera.aspect < 0.6 ? 0.78 : 0.9);
+      camera.fov = 54;
     }
     camera.updateProjectionMatrix();
   }
@@ -369,6 +371,13 @@
   window.addEventListener('pointermove', (e) => {
     mouse.tx = (e.clientX / window.innerWidth) * 2 - 1;
     mouse.ty = (e.clientY / window.innerHeight) * 2 - 1;
+  }, { passive: true });
+
+  // phones: tilt the device to move the mark (works where no permission prompt is needed)
+  window.addEventListener('deviceorientation', (e) => {
+    if (e.gamma == null || e.beta == null) return;
+    mouse.tx = Math.max(-1, Math.min(1, e.gamma / 25));
+    mouse.ty = Math.max(-1, Math.min(1, (e.beta - 45) / 30));
   }, { passive: true });
 
   let scrollP = 0;
@@ -432,8 +441,8 @@
     const camY = 0.6 - mouse.y * 0.4 - scrollP * 1.2;
     camera.position.x += (camX - camera.position.x) * 0.05;
     camera.position.y += (camY - camera.position.y) * 0.05;
-    camera.position.z = (wide ? 13 : 15) + scrollP * 4;
-    camera.lookAt(wide ? 0.6 : 0, wide ? 0.2 : 0.4, 0);
+    camera.position.z = (wide ? 13 : 16) + scrollP * 4;
+    camera.lookAt(wide ? 0.6 : 0, wide ? 0.2 : 0.6, 0);
 
     renderer.render(scene, camera);
   }
